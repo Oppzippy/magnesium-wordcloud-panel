@@ -19,7 +19,7 @@ export interface WordCloudOptions {
 export interface SimpleOptions {
   wordCloudOptions: WordCloudOptions;
   datasource_tags_field: string;
-  datasource_count_field: string;
+  word_regex: string;
   series_index: number;
   stop_words: string | undefined;
   datasource_stop_words: string;

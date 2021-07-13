@@ -13,21 +13,16 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
 
   const words: Array<{ text: string; value: number }> = [];
   let tags: string[] = [];
-  let count: number[] = [];
   let stopWords: string[] = [];
 
   const tagsField = data.series[options.series_index].fields.find(field =>
     options.datasource_tags_field ? field.name === options.datasource_tags_field : field.type === FieldType.string
   );
-  const countField = data.series[options.series_index].fields.find(field =>
-    options.datasource_count_field ? field.name === options.datasource_count_field : field.type === FieldType.number
-  );
   const stopWordsField = data.series[options.series_index].fields.find(field =>
     options.datasource_stop_words ? field.name === options.datasource_stop_words : field.type === FieldType.string
   );
-  if (tagsField && countField) {
+  if (tagsField) {
     tags = tagsField.values.toArray();
-    count = countField.values.toArray();
   }
   if (stopWordsField && options.datasource_stop_words !== undefined) {
     stopWords = stopWordsField.values.toArray();
@@ -37,9 +32,15 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
       stopWords.push(element);
     });
   }
-  tags.forEach((value, index) => {
+  const wordRegex = new RegExp(options.word_regex, 'g');
+  tags = tags.flatMap(tag => tag.match(wordRegex) ?? []).filter(s => s.length !== 0);
+  const count = new Map<string, number>();
+  for (const tag of tags) {
+    count.set(tag, (count.get(tag) ?? 0) + 1);
+  }
+  count.forEach((wordCount, value) => {
     if (stopWords.indexOf(value) === -1) {
-      words.push({ text: value, value: count[index] });
+      words.push({ text: value, value: wordCount });
     }
   });
 

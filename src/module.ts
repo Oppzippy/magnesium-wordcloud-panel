@@ -5,11 +5,6 @@ import { SimplePanel } from './SimplePanel';
 export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOptions(builder => {
   return builder
     .addTextInput({
-      path: 'datasource_count_field',
-      name: 'Count Field',
-      description: 'Datasource Count Field',
-    })
-    .addTextInput({
       path: 'datasource_tags_field',
       name: 'Tags/Words Field',
       description: 'Datasource Tags/Words Field',
@@ -23,6 +18,12 @@ export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOption
       path: 'stop_words',
       name: 'StopWords',
       description: 'Comma seperated list of words (i.e.: hello,world)',
+    })
+    .addTextInput({
+      path: 'word_regex',
+      name: 'Word Regex',
+      description: 'Regex to match words in provided text',
+      defaultValue: "([A-Za-zÀ-ÖØ-öø-ÿ0-9+\\-'$%]+)",
     })
     .addNumberInput({
       path: 'series_index',
