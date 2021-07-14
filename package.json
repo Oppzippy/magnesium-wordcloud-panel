@@ -1,5 +1,5 @@
 {
-  "name": "magnesium-wordcloud-panel",
+  "name": "oppzippy-wordcloud-panel",
   "version": "2.0.0",
   "description": "WordCloud / TagCloud Panel",
   "scripts": {
@@ -10,10 +10,10 @@
     "sign": "grafana-toolkit plugin:sign"
   },
   "repository": "github:grafana/grafana-wordcloud-panel-plugin",
-  "author": "rsperoni@magnesium.coop",
+  "author": "Oppzippy, rsperoni@magnesium.coop",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/raulsperoni/grafana-wordcloud-panel-plugin/issues",
+    "url": "https://github.com/Oppzippy/oppzippy-wordcloud-panel/issues",
     "email": "rsperoni@magnesium.coop"
   },
   "devDependencies": {
