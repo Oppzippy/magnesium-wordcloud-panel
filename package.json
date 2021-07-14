@@ -17,13 +17,13 @@
     "email": "rsperoni@magnesium.coop"
   },
   "devDependencies": {
-    "@grafana/data": "7.3.0",
-    "@grafana/toolkit": "7.3.0",
-    "@grafana/ui": "7.3.0",
-    "emotion": "10.0.27"
+    "@emotion/css": "11.1.3",
+    "@grafana/data": "8.0.5",
+    "@grafana/toolkit": "8.0.5",
+    "@grafana/ui": "8.0.5"
   },
   "engines": {
-    "node": ">=12 <15"
+    "node": ">=14"
   },
   "dependencies": {
     "react-wordcloud": "^1.2.3"
