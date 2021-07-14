@@ -13,8 +13,7 @@
   "author": "Oppzippy, rsperoni@magnesium.coop",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/Oppzippy/oppzippy-wordcloud-panel/issues",
-    "email": "rsperoni@magnesium.coop"
+    "url": "https://github.com/Oppzippy/oppzippy-wordcloud-panel/issues"
   },
   "devDependencies": {
     "@emotion/css": "11.1.3",
