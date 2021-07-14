@@ -1,7 +1,7 @@
 {
   "type": "panel",
   "name": "Word cloud",
-  "id": "magnesium-wordcloud-panel",
+  "id": "oppzippy-wordcloud-panel",
   "info": {
     "description": "WordCloud / TagCloud Panel",
     "author": {
