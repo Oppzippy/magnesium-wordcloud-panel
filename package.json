@@ -9,7 +9,7 @@
     "watch": "grafana-toolkit plugin:dev --watch",
     "sign": "grafana-toolkit plugin:sign --rootUrls https://grafana.oppzippy.com"
   },
-  "repository": "github:grafana/grafana-wordcloud-panel-plugin",
+  "repository": "github:Oppzippy/oppzippy-wordcloud-panel",
   "author": "Oppzippy, rsperoni@magnesium.coop",
   "license": "Apache-2.0",
   "bugs": {
